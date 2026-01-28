@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.c                                           :+:      :+:    :+:   */
+/*   ft_printchr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/26 16:29:02 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/26 16:31:52 by vabad-ro         ###   ########.fr       */
+/*   Created: 2026/01/28 13:56:29 by vabad-ro          #+#    #+#             */
+/*   Updated: 2026/01/28 15:35:34 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libf.h"
+#include "printf.h"
 
-
-
-int	printf(const char *format, ...)
+int	ft_printchr(char c)
 {
-	
+	write(1, &c, 1);
+	return (1);
 }

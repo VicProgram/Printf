@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/28 15:32:38 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/28 15:40:56 by vabad-ro         ###   ########.fr       */
+/*   Created: 2026/01/28 13:21:19 by vabad-ro          #+#    #+#             */
+/*   Updated: 2026/01/28 13:33:45 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef PRINTF_H
-# define PRINTF_H
-
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
 
-int	ft_printchr(char c);
-int percent(char const c, int count, va_list param);
-int	ft_printstr(char *s);
-int	ft_printnbr(int n);
-
-#endif
+int	ft_printstr(char *s)
+{
+	int	i;
+	
+	i = 0;
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	return (i);
+}

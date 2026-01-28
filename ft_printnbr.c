@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/28 15:32:38 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/28 15:40:56 by vabad-ro         ###   ########.fr       */
+/*   Created: 2026/01/28 13:51:22 by vabad-ro          #+#    #+#             */
+/*   Updated: 2026/01/28 15:36:35 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef PRINTF_H
-# define PRINTF_H
+#include "printf.h"
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+int	ft_printnbr(int n)
+{
+	unsigned int	l;
+	int	i;
 
-int	ft_printchr(char c);
-int percent(char const c, int count, va_list param);
-int	ft_printstr(char *s);
-int	ft_printnbr(int n);
-
-#endif
+	i = 0;
+	if (n < 0)
+	{
+		l = -n;
+		write(1, "-", 1);
+		i++;
+	}
+	else
+		l = n;
+	if (l >= 10)
+		ft_printnbr(l / 10);
+	i += ft_printchr((l % 10) + '0');
+	
+	return (i);
+}
