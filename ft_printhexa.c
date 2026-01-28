@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printnbr.c                                      :+:      :+:    :+:   */
+/*   ft_printhexa.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/28 13:51:22 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/28 16:07:17 by vabad-ro         ###   ########.fr       */
+/*   Created: 2026/01/28 16:12:44 by vabad-ro          #+#    #+#             */
+/*   Updated: 2026/01/28 19:31:51 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_printnbr(int n)
+static int	lenhexa(unsigned int n)
 {
-	unsigned int	l;
-	int				i;
+	int	cnt;
 
-	i = 0;
-	if (n < 0)
+	cnt = 1;
+	while (n >=16)
 	{
-		l = -n;
-		write(1, "-", 1);
-		i++;
+		cnt++;
+		n = n / 16;
 	}
-	else
-		l = n;
-	if (l >= 10)
-		ft_printnbr(l / 10);
-	i += ft_printchr((l % 10) + '0');
-	return (i);
+	return (cnt);
 }
+
+int	ft_printhexa(unsigned int c)
+{
+	char	*base;
+	int		result;
+	
+	base = "0123456789ABCDEF";
+	result = lenhexa(c);
+	if (c >= 16)
+		ft_printhexa(c / 16);
+	write (1, &base[c % 16], 1);
+	return (result);
+}
+

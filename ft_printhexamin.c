@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printnbr.c                                      :+:      :+:    :+:   */
+/*   ft_printhexamin.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/28 13:51:22 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/28 16:07:17 by vabad-ro         ###   ########.fr       */
+/*   Created: 2026/01/28 18:54:30 by vabad-ro          #+#    #+#             */
+/*   Updated: 2026/01/28 19:01:24 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_printnbr(int n)
+int	ft_printhexamin(unsigned int c)
 {
-	unsigned int	l;
-	int				i;
-
-	i = 0;
-	if (n < 0)
-	{
-		l = -n;
-		write(1, "-", 1);
-		i++;
-	}
-	else
-		l = n;
-	if (l >= 10)
-		ft_printnbr(l / 10);
-	i += ft_printchr((l % 10) + '0');
-	return (i);
+	char	*base;
+	
+	base = "0123456789abcdef";
+	if (c >= 16)
+		ft_printhexa(c / 16);
+	write (1, &base[c % 16], 1);
+	return (1);
 }
