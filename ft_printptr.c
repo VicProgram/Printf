@@ -6,11 +6,11 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:47:58 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/28 19:31:45 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/28 20:47:10 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libftprintf.h"
 
 static int	countwrite (int i)
 {

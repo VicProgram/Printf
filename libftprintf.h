@@ -6,12 +6,12 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:32:38 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/28 19:31:47 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/28 20:43:56 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
 
 # include <stdio.h>
 # include <stdlib.h>

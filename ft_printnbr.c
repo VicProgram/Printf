@@ -6,11 +6,11 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:51:22 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/28 16:07:17 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/28 20:47:38 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libftprintf.h"
 
 int	ft_printnbr(int n)
 {

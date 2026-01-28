@@ -6,11 +6,11 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 16:29:02 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/28 19:31:45 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/28 20:48:50 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libftprintf.h"
 
 int ft_is_percent(char const c, int count, va_list param)
 {
@@ -61,9 +61,8 @@ int	ft_printf(char const *str, ...)
 	}
 	va_end(param);
 	return (count);
-}
-
-	
+}	
+/*
 int main(void)
 {
 	char	*ptr;
@@ -82,3 +81,4 @@ int main(void)
 	//printf("%d", ft_printf("Hola %s%s y mide %d counter = ", "adios como estamos este pito es increiblemente largo", " luis", -258));
     return (0);
 }
+*/

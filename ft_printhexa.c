@@ -6,11 +6,11 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 16:12:44 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/28 19:48:20 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/28 20:47:48 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libftprintf.h"
 
 static int	lenhexa(unsigned int n)
 {

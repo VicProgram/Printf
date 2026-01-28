@@ -6,11 +6,11 @@
 #    By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/28 15:32:44 by vabad-ro          #+#    #+#              #
-#    Updated: 2026/01/28 19:01:51 by vabad-ro         ###   ########.fr        #
+#    Updated: 2026/01/28 20:43:38 by vabad-ro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = printf.a
+NAME = libftprintf.a
 
 CC = cc
 
@@ -20,7 +20,7 @@ SRC = ft_printchr.c  ft_printchr.o  ft_printf.c  ft_printhexa.c  ft_printhexamin
 
 OBJ = $(SRC:.c=.o)
 
-INCLUDE = printf.h
+INCLUDE = libftprintf.h
 
 AR = ar rcs
 RM = rm -f
@@ -41,5 +41,7 @@ fclean: clean
 	$(RM) $(NAME)
 
 re : fclean all
+
+bonus: $(NAME)
 
 .PHONY: all clean fclean re
