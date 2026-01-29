@@ -6,7 +6,7 @@
 #    By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/28 15:32:44 by vabad-ro          #+#    #+#              #
-#    Updated: 2026/01/29 13:26:37 by vabad-ro         ###   ########.fr        #
+#    Updated: 2026/01/29 17:00:17 by vabad-ro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re : fclean all
-
-bonus: $(NAME)
 
 .PHONY: all clean fclean re
