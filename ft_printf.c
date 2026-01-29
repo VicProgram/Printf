@@ -6,15 +6,17 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 16:29:02 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/28 20:53:15 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/29 12:32:49 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int ft_is_percent(char const c, int count, va_list param)
+static int is_percent(char const c, int count, va_list param)
 {
-	if (c == '%')
+	if (!c)
+		return (0);
+	else if (c == '%')
 	{
 		write(1, "%%", 1);
 		count++;
@@ -28,11 +30,11 @@ int ft_is_percent(char const c, int count, va_list param)
 	else if (c == 'u')
 		count += ft_printunbr(va_arg(param, unsigned int));
 	else if (c == 'p')
-	 	count += ft_printptr(va_arg(param, void *));
+		count += ft_printptr(va_arg(param, void *));
 	else if (c == 'X')
-		count += ft_printhexa(va_arg(param, int));
+		count += ft_printhexa(va_arg(param, unsigned int));
 	else if (c == 'x')
-		count += ft_printhexamin(va_arg(param, int));
+		count += ft_printhexamin(va_arg(param, unsigned int));
 	return (count);
 }
 
@@ -53,29 +55,32 @@ int	ft_printf(char const *str, ...)
 			i++;
 			count++;
 		}
-		if (str[i] == '%' && str[i + 1] != '\0')	
+		if (str[i] == '%')	
 		{
-			count = ft_is_percent(str[++i], count, param);
+			count = is_percent(str[++i], count, param);
 			i++;
 		}
 	}
 	va_end(param);
 	return (count);
 }	
-/*
-int main(void)
+
+/*int main(void)
 {
 	char	*ptr;
 
 	ptr = NULL;
-    //ft_printf("%c", 'h');
+
+	//ft_printf("%5%");
+	printf("%5%");
+	ft_printf("%c\n", 'h');
 	
-	// ft_printf("%x", -141);
-	// ft_printf("%X", -141);
+	ft_printf("%x\n", -141);
+	ft_printf("%X\n", -141);
 	ft_printf("%p\n", ptr);
-	printf("%p\n", ptr);
-	printf("%d\n", ft_printf("%p\n", ptr));
-	printf("%d\n", printf("%p\n", ptr));
+	// printf("%p\n", ptr);
+	// printf("%d\n", ft_printf("%p\n", ptr));
+	// printf("%d\n", printf("%p\n", ptr));
 	
     // printf("Hola %s%s y mide %li", "adios como estamos este pito es increiblemente largo", " luis", -2147483649);
 	//printf("%d", ft_printf("Hola %s%s y mide %d counter = ", "adios como estamos este pito es increiblemente largo", " luis", -258));
