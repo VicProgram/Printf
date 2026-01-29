@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 16:29:02 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/29 17:59:14 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/29 21:04:53 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	is_percent(char const c, va_list param)
 	else if (c == 'p')
 		count = ft_printptr(va_arg(param, void *));
 	else if (c == 'X')
-		count = ft_printhexa(va_arg(param, unsigned long long));
+		count = ft_printhexa(va_arg(param, unsigned long));
 	else if (c == 'x')
 		count = ft_printhexamin(va_arg(param, unsigned int));
 	return (count);
