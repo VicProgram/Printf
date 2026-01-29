@@ -6,13 +6,13 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 18:54:30 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/29 17:45:14 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/29 21:14:47 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printhexamin(unsigned long c)
+int	ft_printhexamin(unsigned int c)
 {
 	char	*base;
 	int		len;
