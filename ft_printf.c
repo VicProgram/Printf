@@ -6,20 +6,11 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 16:29:02 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/29 13:23:26 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/29 13:40:16 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-// static int	is_arg(char c)
-// {
-// 	if (c == '%' || c == 'c' || c == 's' || c == 'p'
-// 	|| c == 'd' || c == 'i'
-// 	|| c == 'u' || c == 'x' || c == 'X')
-// 		return (1);
-// 	return (0);
-// }
 
 static int	is_percent(char const c, va_list param)
 {
@@ -59,14 +50,13 @@ int	ft_printf(char const *str, ...)
 	count = 0;
 	while (*str)
 	{
-		while (*str != '%')
+		while (*str && *str != '%')
 		{
-			
 			write(1, str, 1);
 			count++;
 			str++;
 		}
-		if (*str == '%')
+		if (*str != '\0' && *str == '%')
 		{
 			str++;
 			count += is_percent(*str, param);
@@ -77,14 +67,15 @@ int	ft_printf(char const *str, ...)
 	return (count);
 }
 
-/*int main(void)
+/*
+int main(void)
 {
 	char	*ptr;
 
 	ptr = NULL;
 
-	//ft_printf("%5%");
-	printf("%5%");
+	ft_printf("%5%\n");
+	printf("%5%\n");
 	ft_printf("%c\n", 'h');
 
 	ft_printf("%x\n", -141);
@@ -93,7 +84,7 @@ int	ft_printf(char const *str, ...)
 	// printf("%p\n", ptr);
 	// printf("%d\n", ft_printf("%p\n", ptr));
 	// printf("%d\n", printf("%p\n", ptr));
-
+	
 	// printf("Hola %s%s y mide %li",
 		"adios como estamos este pito es increiblemente largo", " luis",
 		-2147483649);
