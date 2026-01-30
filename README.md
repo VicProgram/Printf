@@ -12,9 +12,32 @@ Nos permite también saber la cantidad de caractéres impresos ya que la funció
 Los conversores o *"Place holders"* van precedidos del símbolo '%', tenemos varios para diferentes formatos.
 
 # Instrucciones
+De forma sencilla hacemos una llamada a la función ft_printf();
 
+Como primer parámetro dentro tenemos la cadena de carácteres que va a incluir los carácteres '%' y detrás los conversores/place holders para dar formato. 
+
+Como segundo parámetro la variablea imprimir.
+
+	Ejemplo
+		ft_printf("%c", 'h');
+	Este ejemplo imprimirá en la terminal el carácter 'h'.
+
+		ft_printf("%X", 141);
+	Este ejemlo imprime en base hexadecimal con las letras mayúsculas el valor 141.
 
 # Listado de funciones
+
+Las conversiones que tenemos disponibles son :
+
+	-c -> Para carácteres individuales.
+	-s -> Para cadenas de carácteres.
+	-p -> Para punteros.
+	-d -> Para números decimales.
+	-i -> Para números enteros.
+	-u -> Para números decimales sin signo *(Unsigned)*.
+	-x -> Para números hexadecimales con la base con letras minúsculas.
+	-X -> Para números hexadecimales con la base con letras mayúsculas.
+	-% -> Para imprimir el carácter '%'.
 
 # Recursos
 

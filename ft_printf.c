@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 16:29:02 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/30 13:59:56 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/30 14:13:20 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,33 +61,3 @@ int	ft_printf(char const *str, ...)
 	va_end(param);
 	return (count);
 }
-
-/*int	xmain(void)
-{
-	char	*ptr;
-	int		n;
-
-	ptr = "cccc";
-	// ft_printf("%5%\n");
-	// printf("%5%\n");
-	// ft_printf("%c\n", 'h');
-	//	n = printf(" %x ", LONG_MAX);
-	// printf("salida: %i\n", n);
-	n = ft_printf(" %x ", LONG_MAX);
-	printf("salida: %i\n", n);
-	// printf("%d", printf(" %x ", LONG_MAX));
-	// ft_printf("%X\n", -141);
-	// ft_printf("%p\n", ptr);
-	// printf("%p\n", ptr);
-	// printf("%d\n", ft_printf("aaaa %c\n", 'a'));
-	// printf("%d\n", printf("aaaa %c\n", 'a'));
-	return (0);
-}
-
-int	main(void)
-{
-	printf("%d \n", ft_printf(" %c %c %c", '0', 0 , '1'));
-	printf("%d \n", printf(" %c %c %c", '0', 0 , '1'));
-	return(0);
-
-}*/
