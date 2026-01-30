@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 16:29:02 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/29 21:14:54 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/30 12:29:07 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ static int	is_percent(char const c, va_list param)
 	int	count;
 
 	count = 0;
-	// if (!c)
-	// 	return (0);
+	if (!c)
+		return (-1);
 	if (c == '%')
 		count = ft_printchr('%');
 	else if (c == 'c')
@@ -32,9 +32,9 @@ static int	is_percent(char const c, va_list param)
 	else if (c == 'p')
 		count = ft_printptr(va_arg(param, void *));
 	else if (c == 'X')
-		count = ft_printhexa(va_arg(param, unsigned int));
+		count = ft_printhexa(va_arg(param, unsigned int), "0123456789ABCDEF");
 	else if (c == 'x')
-		count = ft_printhexamin(va_arg(param, unsigned int));
+		count = ft_printhexamin(va_arg(param, unsigned int), "0123456789abcdef");
 	return (count);
 }
 
@@ -64,22 +64,25 @@ int	ft_printf(char const *str, ...)
 	return (count);
 }
 
-/*int main(void)
+/*int	xmain(void)
 {
 	char	*ptr;
+	int		n;
 
 	ptr = "cccc";
-
 	// ft_printf("%5%\n");
 	// printf("%5%\n");
 	// ft_printf("%c\n", 'h');
-
-	// ft_printf("%x\n", -141);
+	//	n = printf(" %x ", LONG_MAX);
+	// printf("salida: %i\n", n);
+	n = ft_printf(" %x ", LONG_MAX);
+	printf("salida: %i\n", n);
+	// printf("%d", printf(" %x ", LONG_MAX));
 	// ft_printf("%X\n", -141);
 	// ft_printf("%p\n", ptr);
 	// printf("%p\n", ptr);
-		printf("%d\n", ft_printf("aaaa %c\n", 'a'));
-		printf("%d\n", printf("aaaa %c\n", 'a'));
-
+	// printf("%d\n", ft_printf("aaaa %c\n", 'a'));
+	// printf("%d\n", printf("aaaa %c\n", 'a'));
 	return (0);
-}*/
+}
+*/

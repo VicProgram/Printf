@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:47:58 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/29 21:17:52 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/30 12:23:21 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_printptr(void *c)
 {
 	unsigned long	l;
-	int	len;
+	int				len;
 
 	len = 0;
 	if (c == NULL)
