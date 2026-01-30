@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 16:29:02 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/30 14:13:20 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/30 18:59:16 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,14 @@ static int	is_percent(char const c, va_list param)
 	return (count);
 }
 
+static int	valid(char c)
+{
+	if (c == 'c' || c == 's' || c == 'i' || c == 'u' || c == 'p' || c == 'X'
+		|| c == 'x' || c == '%')
+		return (1);
+	return (0);
+}
+
 int	ft_printf(char const *str, ...)
 {
 	int		count;
@@ -43,6 +51,8 @@ int	ft_printf(char const *str, ...)
 
 	va_start(param, str);
 	count = 0;
+	if (!str)
+		return (-1);
 	while (*str)
 	{
 		if (*str && *str != '%')
@@ -54,10 +64,22 @@ int	ft_printf(char const *str, ...)
 		else if (*str != '\0' && *str == '%')
 		{
 			str++;
-			count += is_percent(*str, param);
+			if (valid(*str))
+				count += is_percent(*str, param);
 			str++;
 		}
 	}
 	va_end(param);
 	return (count);
 }
+
+/*int	main(void)
+{
+	// printf("% ");
+	// printf("%w");
+	// int i = 9;
+	// char s = "hola";
+	ft_printf("e");
+	// printf("% ");
+}
+*/
