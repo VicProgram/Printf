@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 16:29:02 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/30 12:30:20 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/30 13:07:45 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ static int	is_percent(char const c, va_list param)
 	int	count;
 
 	count = 0;
-	if (!c)
-		return (-1);
 	if (c == '%')
 		count = ft_printchr('%');
 	else if (c == 'c')
@@ -85,4 +83,11 @@ int	ft_printf(char const *str, ...)
 	// printf("%d\n", printf("aaaa %c\n", 'a'));
 	return (0);
 }
-*/
+
+int	main(void)
+{
+	printf("%d \n", ft_printf(" %c %c %c", '0', 0 , '1'));
+	printf("%d \n", printf(" %c %c %c", '0', 0 , '1'));
+	return(0);
+
+}*/

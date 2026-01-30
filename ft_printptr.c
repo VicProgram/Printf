@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:47:58 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/01/30 12:23:21 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/01/30 12:53:46 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int	ft_printptr(void *c)
 		return (ft_printstr("(nil)"));
 	l = (unsigned long)c;
 	ft_printstr("0x");
-	len += ft_printhexamin(l);
+	len += ft_printhexa((l), "0123456789abcdef");
 	return (len + 2);
 }
