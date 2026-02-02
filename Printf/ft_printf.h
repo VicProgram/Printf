@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:32:38 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/02/02 12:50:19 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/02/02 19:15:37 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,5 @@ int	ft_printnbr(int n);
 int	ft_printunbr(unsigned int n);
 int	ft_printptr(void *c);
 int	ft_printhexa(unsigned long c, const char *base);
-int	ft_printhexamin(unsigned long c);
 
 #endif
