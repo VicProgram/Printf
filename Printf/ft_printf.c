@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 16:29:02 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/02/02 13:10:34 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/02/04 17:44:16 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,19 +73,10 @@ int	ft_printf(char const *str, ...)
 	return (count);
 }
 
-/*
+
 int	main(void)
 {
-	int i = 9;
-	char *s = "hola";
 	
-	ft_printf("Resultado orignial: \n");
-	printf("% ");
-	ft_printf("Resultado Vic: \n");
-	ft_printf("% ");
-	ft_printf("Resultado orignial: \n");
-	printf("%d %s\n", i , s);
-	ft_printf("Resultado Vic: \n");
-	ft_printf("%d %s\n", i , s);
+	
+printf("%d", ft_printf("hola%"));
 }
-*/
