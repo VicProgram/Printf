@@ -72,11 +72,3 @@ int	ft_printf(char const *str, ...)
 	va_end(param);
 	return (count);
 }
-
-
-int	main(void)
-{
-	
-	
-printf("%d", ft_printf("hola%"));
-}
